@@ -1,0 +1,53 @@
+.container {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 96px auto;
+    width: 300px;
+    height: 45vh;
+    background-color: #1d1c20;
+    border-radius: 12px;
+}
+
+.moeda {
+    display: block;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    margin-top: 18px;
+    background-color: #575353;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    transition: all 1s;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+.div1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin: 12px 0;
+}
+
+.tdProfit {
+    font-weight: bold;
+    font-size: 18px;
+    color: #21f98a;
+}
+
+.tdLoss {
+    font-weight: bold;
+    font-size: 18px;
+    color: #f91257;
+}
