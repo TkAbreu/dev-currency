@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+Dev Currency
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Currency is a React-based web application that displays real-time cryptocurrency market data.
+The project consumes the CoinCap API to show updated information such as price, market capitalization, volume, and 24h variation for multiple cryptocurrencies.
 
-Currently, two official plugins are available:
+This application was developed as part of a learning project inspired by the SujeitoProgramador course, with additional customizations, improvements, and architectural decisions made during development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## React Compiler
+Real-time cryptocurrency data using CoinCap API
+List of top cryptocurrencies with pagination (load more / load less)
+Individual coin details page
+Search by cryptocurrency name
+Price, market cap, supply, volume, and 24h change formatting
+Dynamic loading indicator
+Responsive table layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+React
+TypeScript
+Vite
+Tailwind CSS
+CSS Modules
+React Router DOM
+Shadcn/ui
+CoinCap API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📦 Installation & Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repository:
+git clone https://github.com/your-username/dev-currency.git
+Navigate to the project folder:
+cd dev-currency
+Install dependencies:
+npm install
+Create an environment file:
+cp .env.example .env
+Add your CoinCap API token to .env
+Start the development server:
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🧩 Project Structure
+src/
+ ├─ assets/
+ ├─ components/
+ │   ├─ header
+ |   ├─ layout
+ │   └─ shadui
+ ├─ pages/
+ │   ├─ home
+ │   ├─ details
+ │   └─ notfound
+ └─ routes/
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📚 API Reference
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+CoinCap API
+https://docs.coincap.io/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎓 Credits
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project was built based on concepts learned in the SujeitoProgramador course and expanded with custom logic, styling, and improvements for portfolio and learning purposes.
+
+📄 License
+
+This project is for educational purposes and personal portfolio use.
